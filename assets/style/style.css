@@ -1,0 +1,673 @@
+@import 'fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.nav {
+  padding: 25px 0;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+.nav__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+.nav__list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.nav__list-link {
+  color: #000;
+  font-family: "Playfair";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav__search {
+  display: flex;
+  gap: 4px;
+}
+.nav__search input {
+  padding: 6px 12px;
+  border: 1px solid #41a28e;
+  color: #4b4848;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+}
+.nav__search input::placeholder {
+  color: #4b4848;
+}
+.nav__search button {
+  background: #41a28e;
+  padding: 7px;
+  outline: none;
+  border: none;
+}
+.dropdown__item {
+  position: relative;
+}
+.dropdown__list {
+  border-radius: 2px;
+  border: 0px solid #e5e5e5;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 28px;
+  transition: .05s;
+  height: 0;
+}
+.dropdown__list a {
+  transform: scale(0);
+  transition: .5s;
+}
+.dropdown__item:hover .dropdown__list{
+  height: 120px;
+  border-width: 1px;
+}
+.dropdown__item:hover .dropdown__list a{
+  transform: scale(1);
+}
+.dropdown__list-link {
+  color: #000;
+  font-family: "Playfair";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 12px 30px;
+  display: block;
+  transition: 0.03s;
+}
+.dropdown__list-link:hover {
+  background: #41A28E;
+  color: rgb(255, 255, 255);
+}
+.link-border {
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+}
+.header {
+  min-height: 749px;
+  background: url("../images/header_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__title {
+  color: #FFF;
+  font-family: 'Playfair Display';
+  font-size: 50px;
+  font-weight: 400;
+  padding: 17px 52px;
+  background: rgba(0, 0, 0, 0.70);
+}
+.header__subtitle{
+  color: #FFF;
+  text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.38);
+  font-family: 'Playfair';
+  font-size: 22px;
+  font-weight: 400;
+  margin: 30px 0 50px 0;
+}
+.header__btn {
+  color: #000;
+  font-family: 'Playfair';
+  font-size: 12px;
+  font-weight: 400;
+  padding: 22px 35px;
+  background: #FFF;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
+}
+.header__btn::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -110%;
+  background: #41A28E;
+  transition: 0.5s;
+}
+.header__btn:hover.header__btn::before{
+  left: 0;
+}
+.header__btn:hover span{
+  color: white;
+}
+.header__btn span{
+  z-index: 5;
+  position: relative;
+  transition: 0.5s;
+}
+.commerce {
+  padding-top: 48px;
+  padding-bottom: 72px;
+  
+}
+.commerce__content-item{
+  max-width: 255px;
+  overflow: hidden;
+  position: relative;
+}
+.commerce__content-item img{
+  transition: 0.5s;
+}
+.commerce__content-item:hover img{
+  transform: scale(1.2);
+}
+.commerce__content-item::before{
+  content:'Barcelona';
+  color: #FFF;
+  text-align: center;
+  font-family: 'Playfair';
+  font-size: 25px;
+  font-weight: 400;
+  background: rgba(75, 72, 72, 0.70);
+  width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  bottom: -20%;
+  z-index: 5;
+  transition: 0.5s;
+}
+.commerce__content-item:hover.commerce__content-item::before{
+  bottom: 0;
+}
+.commerce__content-item1{
+  position: relative;
+  overflow: hidden;
+}
+.commerce__content-item1 img{
+  transition: 0.5s;
+}
+.commerce__content-item1:hover img{
+  transform: scale(1.2);
+}
+.commerce__content-item1 p{
+  color: #FFF;
+  text-align: center;
+  font-family: 'Playfair';
+  font-size: 25px;
+  font-weight: 400;
+  background: rgba(75, 72, 72, 0.70);
+  width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  bottom: -20%;
+  z-index: 5;
+  transition: 0.5s;
+}
+.commerce__content-item1:hover p{
+  bottom: 0;
+}
+.commerce__content-items{
+  display: flex;
+  justify-content: space-between;
+}
+.commerce__title {
+  color: #000;
+  text-align: center;
+  font-family: 'Playfair';
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 52px;
+}
+.commerce__descr {
+  color: #666;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 18px;
+}
+.commerce__content {
+  display: flex;
+  flex-direction: column;
+  
+}
+.collection__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  
+}
+.collection {
+  min-height: 404px;
+  background-image: url(../images/bg.png);
+  background-attachment: fixed;
+  display: flex;
+}
+.collection__content-desr{
+  color: #FFF;
+  font-family: 'Playfair';
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+.collection__content-title{
+  color: #FFF;
+  font-family: 'Playfair';
+  font-size: 20px;
+  font-weight: 400;
+}
+.collection__content-link{
+  color: #000;
+  font-family: 'Playfair';
+  font-size: 12px;
+  font-weight: 400;
+  background: #FFF;
+  max-width:max-content;
+  padding: 23px 42px;
+  position: relative;
+}
+.collection__content-link::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #41A28E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: 0.5s;
+}
+.collection__content-link span{
+  z-index: 2;
+  position: relative;
+}
+.collection__content-link:hover span{
+  color: white;
+}
+.collection__content-link:hover.collection__content-link::before{
+  transform: scale(1);
+}
+/* .customizable__content-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.customizable__content-title{
+  color: #000;
+  font-family: 'Playfair';
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 50px;
+}
+.customizable__content-subtitle{
+  color: #666;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 69px;
+}
+.customizable__content-cards{
+  display: flex;
+  gap: 30px;
+}
+.customizable__content-card{
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+.customizable__card-text h4{
+  color: #000;
+  font-family: 'Playfair';
+  font-size: 22px;
+  font-weight: 400;
+}
+.customizable__card-text p{
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums; 
+  font-feature-settings: 'liga' off;
+  font-family: 'Playfair';
+  font-size: 18px;
+  font-weight: 400;
+}
+.customizable__card-outofstock {
+  position: relative;
+}
+.customizable__card-outofstock::before {
+  content: 'OUT OF STOCK';
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  background: #4B484B;
+  padding: 10px 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -4;
+  transition: .5s;
+}
+.customizable__card-outofstock:hover.customizable__card-outofstock::before{
+  z-index: 1;
+}
+.customizable__card-sale {
+  position: relative;
+}
+.customizable__card-sale::before {
+  content: 'SALE';
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  background: #4B484B;
+  padding: 10px 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -4;
+  transition: .5s;
+}
+.customizable__card-sale:hover.customizable__card-sale::before{
+  z-index: 1;
+}
+.card__price-change{
+  position: relative;
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'liga' off;
+  font-family: 'Playfair';
+  font-size: 18px;
+  font-weight: 400;
+}
+.card__price-change::after{
+  content: '$16.00';
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'liga' off;
+  font-family: 'Playfair';
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  transform: scale(0);
+  transition: .5ss;
+}
+.card__price-change::before{
+  content:' ';
+  max-width: 55px;
+  height: 2px;
+  background:  #909090;
+  width: 100%;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  transform: scale(0);
+  transition: .5s;
+}
+.card__price-change:hover.card__price-change::before{
+  transform: scale(1);
+}
+.card__price-change:hover{
+  color: #666;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'liga' off;
+  font-family: 'Playfair';
+  font-size: 18px;
+  font-weight: 400;
+}
+.card__price-change:hover.card__price-change::after{
+  transform: scale(1);
+} */
+.customizable__content{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.customizable__title{
+  color: #000;
+  font-family: 'Playfair';
+  font-size: 50px;
+  font-weight: 400;
+}
+.customizable__subtitle{
+  color: #666;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 496px;
+  margin-top: 18px;
+  margin-bottom: 69px;
+}
+.customizable__item-img{
+  display: flex;flex-direction: column;
+  position: relative;
+}
+.item__img-info{
+  height: 47px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.70);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.item__cart-btn {
+  display: flex;
+  align-items: center;
+}
+.item__cart-btn span{
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: 'Playfair';
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.item__btns{
+  display: flex;
+  gap: 23px;
+}
+.item__img-info{
+  transform: scale(0);
+  transition: .5s;
+}
+.customizable__item:hover .item__img-info{
+  transform: scale(1);
+}
+.customizable__item-title{
+  color: #000;
+  font-family: 'Playfair';
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 43px;
+}
+.customizable__item-price{
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'liga' off;
+  font-family: 'Playfair';
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+.customizable__items{
+  display: flex;
+  gap: 30px;
+}
+.customizable__item-price span{
+  text-decoration: line-through;
+  color: #909090;
+  margin-right: 12px;
+}
+.customizable__item:nth-child(2){
+  position: relative;
+}
+.customizable__item:nth-child(2)::before{
+  content:'OUT OF STOCK';
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  background: #4B484B;
+  padding: 10px 18px;
+  position: absolute;
+  z-index: 1;
+}
+.customizable__item:nth-child(4){
+  position: relative;
+}
+.customizable__item:nth-child(4)::before{
+  content:'SALE';
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  background: #4B484B;
+  padding: 10px 18px;
+  position: absolute;
+  z-index: 1;
+}
+.footer {
+  padding-top: 36px;
+  background: #000;
+}
+.footer__content-item-title{
+  color: #FFF;
+  font-family: 'Playfair';
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.footer-content{
+  display: flex;
+  gap: 30px;
+}
+.footer__content-item-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__content-item{
+  min-width: 255px;
+}
+.footer__content-item-list-link{
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  height: 36px;
+  transition: .5s;
+}
+.footer__content-item-list-link:hover{
+  color: #41A28E;
+}
+.footer__content-item:nth-of-type(3) .footer__content-item-list-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  border-radius: 4px;
+  
+}
+.item__search{
+  display: flex;
+}
+.item__search input{
+  max-width: 200px;
+  padding: 14px 10px;
+  border: none;
+  outline: none;
+}
+.item__search input::placeholder{
+  color: #909090;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+}
+.item__search button{
+  max-width: 55px;
+  background: #41A28E;
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  transition: .5s;
+  position: relative;
+}
+.item__search button::before{
+  content: ' ';
+  width: 2px;
+  height: 44px;
+  background: #41A28E;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.item__search button:hover{
+  font-size: 18px;
+  color:#41A28E;
+  background: #FFF;
+}
+.footer__content-descr{
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.footer__payments-list{
+  display: flex;
+  gap: 25px;
+}
+.footer__info-descr{
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  background: #121212;
+  padding: 40px;
+}
+.footer__info-descr p{
+  color: #666;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__brand-name{
+  text-shadow: 0px 0px 4px #E52D27;
+  }
